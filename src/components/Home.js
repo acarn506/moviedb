@@ -1,16 +1,17 @@
 import React from 'react'
-import reactDom from 'react-dom'
+
 // Config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config'
 
 // Components
+import HeroImage from './HeroImage'
+import Grid from './Grid'
 
 // Hook 
 import { useHomeFetch } from '../hooks/useHomeFetch'
 
 // Image
 import NoImage from '../images/no_image.jpeg'
-import HeroImage from './HeroImage'
 
 const Home = () => {
 
@@ -27,7 +28,11 @@ const Home = () => {
                     text={state.results[0].overview}
                 /> 
             : null}
-            
+            <Grid header={'Popular Movies'}>
+                {state.results.map( movie => (
+                    <div key={movie.id}>{movie.title}</div>
+                ))}
+            </Grid>
         </>
        
     )
