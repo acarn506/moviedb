@@ -1,4 +1,3 @@
-import { call } from 'file-loader'
 import React from 'react'
 
 //Styles

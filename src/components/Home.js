@@ -19,7 +19,18 @@ import NoImage from '../images/no_image.jpeg'
 
 const Home = () => {
 
-    const { state, loading, error, searchTerm, setSearchTerm} = useHomeFetch()
+    const { 
+        state, 
+        loading, 
+        error, 
+        searchTerm, 
+        setSearchTerm, 
+        setIsLoadingMore
+    } = useHomeFetch()
+
+    console.log(state)
+
+    if (error) return  <div>Is Something Wrong...</div>
 
     return (
         <>
@@ -46,10 +57,9 @@ const Home = () => {
             </Grid>
             {loading && <Spinner/>}
             {state.page < state.total_pages && !loading && 
-                (<Button text='Load More'/>) 
+                (<Button text='Load More' callback={() => setIsLoadingMore(true)}/>) 
             }
         </>
-       
     )
 }
 
