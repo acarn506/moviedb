@@ -24,6 +24,21 @@ const MovieInfo = ({ movie }) => (
                 clickable={false}
                 alt={'movie-thumb'}
             />
+            <Text>
+                <h1>{movie.title}</h1>
+                <h3>Plot</h3>
+                <p>{movie.overview}</p>
+
+                <div className='rating-directors'>
+                    <div>
+                        <h3>RATING</h3>
+                        <div className='score'>{movie.vote_average}</div>
+                    </div>
+                    <div className='director'>
+                        <h3>DIRECTOR</h3>
+                    </div>
+                </div>
+            </Text>
         </Content>
     </Wrapper>
 )
