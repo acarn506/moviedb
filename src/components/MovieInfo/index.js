@@ -13,6 +13,7 @@ import NoImage from '../../images/no_image.jpeg'
 import { Wrapper, Content, Text } from './MovieInfo.styles'
 
 const MovieInfo = ({ movie }) => (
+
     <Wrapper backdrop={movie.backdrop_path}>
         <Content>
             <Thumb 
