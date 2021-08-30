@@ -17,7 +17,6 @@ import { useMovieFetch } from '../hooks/useMovieFetch'
 
 // Image 
 import NoImage from '../images/no_image.jpeg'
-import { typeOf } from 'react-is'
 
 const Movie = () => {
     const { movieId } = useParams()
