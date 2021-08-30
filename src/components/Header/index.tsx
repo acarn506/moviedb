@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { Wrapper, Content, Banner } from './Header.styles'
 
-const Header = () => (
+const Header: React.FC = () => (
     <Wrapper>
         <Content> 
             <Banner>

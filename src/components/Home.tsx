@@ -17,7 +17,7 @@ import { useHomeFetch } from '../hooks/useHomeFetch'
 // Image
 import NoImage from '../images/no_image.jpeg'
 
-const Home = () => {
+const Home: React.FC = () => {
 
     const { 
         state, 
